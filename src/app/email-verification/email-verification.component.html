@@ -1,0 +1,55 @@
+<div class="main"[class.blur]="showSuccessMessage">
+    <div class="left">
+        <div class="logo">
+            <i class="fa-solid fa-wave-square"></i>
+            <h1>Soupmarkets</h1>
+            
+        </div>
+        <!-- {{userForm | json}} -->
+        <div class="form">
+            <h1>Email verification</h1>
+            <small>Enter the verififcation code sent to your email to<br/> continue.</small>
+            <form>
+               
+                <div class="col spacing">
+                    <label>Verification code</label>
+                    <input type="text" placeholder="xxxx-xxxx" />
+                </div>
+            
+  
+  
+  <button (click)="continue()" >Continue</button>
+  <div class="mag-c">Didn't receive a code?<a (click)="resendVerificationCode()">Resend in {{ formatTime(countdown)}}</a></div>
+ 
+  
+ 
+  
+  
+                
+                
+          
+            </form>
+        </div>
+    </div>
+    <div class="right">
+        <img src="https://www.stylerave.com/wp-content/uploads/2021/12/pexels-andrea-piacquadio-3762925-1200x800.jpg" >
+        <div class="right-text">
+            <p class="bold">Investing Made Effortless </p>
+            <p class="faded">Unlock the Power of Effortless Investing:Your Gateway <br/>to Financial Freedom,Where Your Wealth Grows and Dreams Flourish! </p>
+        </div>
+    </div>
+</div>
+
+ <!-- email-verification.component.html -->
+  <div class="success-message" *ngIf="showSuccessMessage">
+    <div class="check">
+      <i class="fa-solid fa-check"></i>
+    </div>
+    <div class="s-m">
+      <p>Your account has been created successfully</p>
+    </div>
+    <div class="done">
+      <button (click)="ToSignIn()">Done</button>
+    </div>
+  </div>
+

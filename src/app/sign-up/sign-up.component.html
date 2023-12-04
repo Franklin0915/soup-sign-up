@@ -1,0 +1,109 @@
+<div class="main">
+    <div class="left">
+        <div class="logo">
+            <i class="fa-solid fa-wave-square"></i>
+            <h1>Soupmarkets</h1>
+            
+        </div>
+        <!-- {{userForm | json}} -->
+        <div class="form" >
+            <h1>Create your account</h1>
+            <small>Welcome! Create ana account and begin your investment journey.</small>
+            <form #myForm = "ngForm" (ngSubmit)="onSubmit()" novalidate>
+              <div class="col spacing">
+                <label>First name</label>
+                <input
+                  #firstNameInput
+                  required
+                  type="text"
+                  placeholder="Enter your first name"
+                  name="firstName"
+                  [(ngModel)]="userForm.firstName"
+                  
+                />
+                <small *ngIf="$any(firstNameInput).touched && $any(firstNameInput).invalid" style="color: red;">Name is required</small>
+              </div>
+              
+              <!-- ... Existing code ... -->
+              
+              <div class="col spacing">
+                <label>Last name</label>
+                <input 
+                  #lastNameInput
+                  required
+                  type="text"
+                  placeholder="Enter your last name"
+                  name="lastName"
+                  [(ngModel)]="userForm.lastName"
+                  
+                />
+              </div>
+              
+              <!-- ... Existing code ... -->
+              
+              <div class="col spacing">
+                <label>Email or phone number</label>
+                <input
+                  type="text"
+                  #email_phoneInput
+                  required
+                  placeholder="Enter your email or phone number"
+                  name="email_phone"
+                  [(ngModel)]="userForm.email_phone"
+                  (input)="validateEmailOrPhone()"
+                  
+                  
+                  [class.invalid]="!isEmailOrPhoneValid && userForm.email_phone !== ''"
+                />
+                <div *ngIf="!isEmailOrPhoneValid && userForm.email_phone !== ''" class="error-message">
+                  {{ errorMessage }}
+                </div>
+              </div>
+               
+
+
+
+              <div class="col spacing">
+                <label>Create a password</label>
+                <div class="password-container">
+                  <input type="{{passwordVisible ? 'password':'text'}}" placeholder="Enter your password" name="password" [(ngModel)]="userForm.password" />
+                  <i class="fa-solid fa-eye" *ngIf="!passwordVisible" (click)="togglePasswordVisibility()"></i>
+                  <i class="fa-solid fa-eye-slash" *ngIf="passwordVisible" (click)="togglePasswordVisibility()"></i>
+                </div>
+              </div>
+              
+              <div class="col spacing">
+                <label>Confirm your new password</label>
+                <div class="password-container">
+                    <input type="{{ confirmPasswordVisible ? 'password' : 'text' }}" placeholder="Enter your password" name="confirmPassword" [(ngModel)]="userForm.confirmPassword" (input)="validateEmailOrPhone()" (blur)="setConfirmPasswordTyped()" />
+                    <i class="fa-solid fa-eye" *ngIf="!confirmPasswordVisible" (click)="toggleConfirmPasswordVisibility()"></i>
+                    <i class="fa-solid fa-eye-slash" *ngIf="confirmPasswordVisible" (click)="toggleConfirmPasswordVisibility()"></i>
+                </div>
+                <div *ngIf="passwordsDoNotMatch" class="error-message" style="color: red;">
+                  Passwords do not match
+              </div>
+              
+            </div>
+            
+              
+            <button [disabled]="!isEmailOrPhoneValid || !isFormValid() || !passwordsMatch()" >Sign Up</button>
+
+
+              
+
+  
+  
+                
+                
+          
+            </form>
+        </div>
+    </div>
+    <div class="right">
+        <img src="https://www.stylerave.com/wp-content/uploads/2021/12/pexels-andrea-piacquadio-3762925-1200x800.jpg" >
+        <div class="right-text">
+            <p class="bold">Investing Made Effortless </p>
+            <p class="faded">Unlock the Power of Effortless Investing:Your Gateway <br/>to Financial Freedom,Where Your Wealth Grows and Dreams Flourish! </p>
+        </div>
+    </div>
+</div>

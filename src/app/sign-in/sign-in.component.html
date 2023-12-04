@@ -1,0 +1,51 @@
+<div class="main">
+    <div class="left">
+        <div class="logo">
+            <i class="fa-solid fa-wave-square"></i>
+            <h1>Soupmarkets</h1>
+            
+        </div>
+        <!-- {{userForm | json}} -->
+        <div class="form">
+            <h1>Welcome back!</h1>
+            <small>Login with your email or phone number to continue.</small>
+            <form>
+               
+                <div class="col spacing">
+                    <label>Email or phone number</label>
+                    <input type="text" placeholder="Enter your email or phone number" name="email_phone"[(ngModel)]="userForm.email_phone"/>
+                </div>
+               
+
+
+
+<div class="col spacing">
+    <label>Password</label>
+    <div class="password-container">
+      <input type="{{passwordVisible ? 'password':'text'}}" placeholder="Enter your password" name="password" [(ngModel)]="userForm.password" />
+      <i class="fa-solid fa-eye" *ngIf="!passwordVisible" (click)="togglePasswordVisibility()"></i>
+      <i class="fa-solid fa-eye-slash" *ngIf="passwordVisible" (click)="togglePasswordVisibility()"></i>
+    </div>
+  </div>
+  <div class="mag-r"><a routerLink="/forgotPassword">Forgot password?</a></div>
+  
+  
+  <button (click)="onSignIn()" >Login</button>
+  <div class="mag-c">Don't have an account?<a  routerLink="/signUp">Sign up</a></div>
+  
+  
+                
+                
+          
+            </form>
+        </div>
+    </div>
+    <div class="right">
+        <img src="https://www.stylerave.com/wp-content/uploads/2021/12/pexels-andrea-piacquadio-3762925-1200x800.jpg" >
+        <div class="right-text">
+            <p class="bold">Investing Made Effortless </p>
+            <p class="faded">Unlock the Power of Effortless Investing:Your Gateway <br/>to Financial Freedom,Where Your Wealth Grows and Dreams Flourish! </p>
+        </div>
+    </div>
+</div>
+
