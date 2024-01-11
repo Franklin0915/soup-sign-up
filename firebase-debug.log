@@ -1,0 +1,21 @@
+[debug] [2023-12-04T16:50:05.978Z] ----------------------------------------------------------------------
+[debug] [2023-12-04T16:50:05.980Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\frank\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init
+[debug] [2023-12-04T16:50:05.980Z] CLI Version:   12.9.1
+[debug] [2023-12-04T16:50:05.980Z] Platform:      win32
+[debug] [2023-12-04T16:50:05.980Z] Node Version:  v20.9.0
+[debug] [2023-12-04T16:50:05.980Z] Time:          Mon Dec 04 2023 16:50:05 GMT+0000 (Greenwich Mean Time)
+[debug] [2023-12-04T16:50:05.980Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-12-04T16:50:05.985Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-12-04T16:50:05.985Z] > authorizing via signed-in user (franklinokrah465@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  C:\Users\frank\Desktop\Soft\Angular\Soup prep\soup-sign-up
+

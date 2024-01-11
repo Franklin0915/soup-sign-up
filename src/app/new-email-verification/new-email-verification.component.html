@@ -13,12 +13,12 @@
                
                 <div class="col spacing">
                     <label>Verification code</label>
-                    <input type="text" placeholder="xxxx-xxxx" name="verificationCode" [(ngModel)]="userForm.verificationCode"/>
+                    <input type="text" placeholder="xxxx-xxxx" name="verificationCode" [(ngModel)]="userForm.resetVerificationCode"/>
                 </div>
             
   
   
-                <button (click)="getVerificationCode()">
+                <button (click)="checkResetVerificationCode()">
                   Continue
                 </button>
                
@@ -46,7 +46,7 @@
 </div>
 
  <!-- email-verification.component.html -->
-  <div class="success-message" *ngIf="showSuccessMessage">
+  <!-- <div class="success-message" *ngIf="showSuccessMessage">
     <div class="check">
       <i class="fa-solid fa-check"></i>
     </div>
@@ -56,5 +56,5 @@
     <div class="done">
       <button (click)="ToSignIn()">Done</button>
     </div>
-  </div>
+  </div> -->
 

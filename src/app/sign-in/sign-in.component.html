@@ -13,7 +13,7 @@
                
                 <div class="col spacing">
                     <label>Email or phone number</label>
-                    <input type="text" placeholder="Enter your email or phone number" name="email_phone"[(ngModel)]="userForm.email_phone"/>
+                    <input  required type="text" placeholder="Enter your email or phone number" name="email_phone"[(ngModel)]="userForm.email_phone"/>
                 </div>
                
 
@@ -22,9 +22,9 @@
 <div class="col spacing">
     <label>Password</label>
     <div class="password-container">
-      <input type="{{passwordVisible ? 'password':'text'}}" placeholder="Enter your password" name="password" [(ngModel)]="userForm.password" />
-      <i class="fa-solid fa-eye" *ngIf="!passwordVisible" (click)="togglePasswordVisibility()"></i>
-      <i class="fa-solid fa-eye-slash" *ngIf="passwordVisible" (click)="togglePasswordVisibility()"></i>
+      <input type="{{passwordVisible ? 'text':'password'}}" placeholder="Enter your password" name="password" [(ngModel)]="userForm.password" />
+      <i class="fa-solid fa-eye" *ngIf="passwordVisible" (click)="togglePasswordVisibility()"></i>
+      <i class="fa-solid fa-eye-slash" *ngIf="!passwordVisible" (click)="togglePasswordVisibility()"></i>
     </div>
   </div>
   <div class="mag-r"><a routerLink="/forgotPassword">Forgot password?</a></div>

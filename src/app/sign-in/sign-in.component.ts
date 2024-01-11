@@ -14,7 +14,7 @@ export class SignInComponent {
   confirmPassword: string = '';
   passwordVisible: boolean = false;
   confirmPasswordVisible: boolean = false;
-  userForm = new Form('Franklin', 'Kwasi', 4566555, '*******', '');
+  userForm = new Form('Franklin', 'Kwasi', '', '', '','','');
 
   loading: boolean = false; // Added loading flag
 
@@ -39,7 +39,7 @@ export class SignInComponent {
 
 next: (data: any) => {
   this.loading = false;
-  console.log(data);
+  // console.log(data);
 
  
   const userInputEmail = this.userForm.email_phone;

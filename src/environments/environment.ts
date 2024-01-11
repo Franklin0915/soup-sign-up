@@ -1,4 +1,5 @@
 export const environment = {
+  production:false,
      firebaseConfig : {
         apiKey: "AIzaSyBHHwtdhE6ea5nfMv0xT2zHQWUxo_2GoVw",
         authDomain: "soup-data-collection.firebaseapp.com",

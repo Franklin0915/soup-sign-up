@@ -6,7 +6,13 @@ export class Form {
       public lastName: string,
       public email_phone: any,
       public password: any,
-      public confirmPassword: any
+      public confirmPassword: any,
+      public verificationCode:any,
+      public resetVerificationCode:any,
+      
+      
+
+      
     ) {}
   }
   

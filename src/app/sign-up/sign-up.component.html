@@ -66,18 +66,18 @@
               <div class="col spacing">
                 <label>Create a password</label>
                 <div class="password-container">
-                  <input type="{{passwordVisible ? 'password':'text'}}" placeholder="Enter your password" name="password" [(ngModel)]="userForm.password" />
-                  <i class="fa-solid fa-eye" *ngIf="!passwordVisible" (click)="togglePasswordVisibility()"></i>
-                  <i class="fa-solid fa-eye-slash" *ngIf="passwordVisible" (click)="togglePasswordVisibility()"></i>
+                  <input type="{{passwordVisible ? 'text':'password'}}" placeholder="Enter your password" name="password" [(ngModel)]="userForm.password" />
+                  <i class="fa-solid fa-eye" *ngIf="passwordVisible" (click)="togglePasswordVisibility()"></i>
+                  <i class="fa-solid fa-eye-slash" *ngIf="!passwordVisible" (click)="togglePasswordVisibility()"></i>
                 </div>
               </div>
               
               <div class="col spacing">
                 <label>Confirm your new password</label>
                 <div class="password-container">
-                    <input type="{{ confirmPasswordVisible ? 'password' : 'text' }}" placeholder="Enter your password" name="confirmPassword" [(ngModel)]="userForm.confirmPassword" (input)="validateEmailOrPhone()" (blur)="setConfirmPasswordTyped()" />
-                    <i class="fa-solid fa-eye" *ngIf="!confirmPasswordVisible" (click)="toggleConfirmPasswordVisibility()"></i>
-                    <i class="fa-solid fa-eye-slash" *ngIf="confirmPasswordVisible" (click)="toggleConfirmPasswordVisibility()"></i>
+                    <input type="{{ confirmPasswordVisible ? 'text' : 'password' }}" placeholder="Enter your password" name="confirmPassword" [(ngModel)]="userForm.confirmPassword" (input)="validateEmailOrPhone()" (blur)="setConfirmPasswordTyped()" />
+                    <i class="fa-solid fa-eye" *ngIf="confirmPasswordVisible" (click)="toggleConfirmPasswordVisibility()"></i>
+                    <i class="fa-solid fa-eye-slash" *ngIf="!confirmPasswordVisible" (click)="toggleConfirmPasswordVisibility()"></i>
                 </div>
                 <div *ngIf="passwordsDoNotMatch" class="error-message" style="color: red;">
                   Passwords do not match
